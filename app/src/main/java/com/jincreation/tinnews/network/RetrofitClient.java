@@ -1,5 +1,7 @@
 package com.jincreation.tinnews.network;
 
+import com.facebook.stetho.okhttp3.StethoInterceptor;
+
 import java.io.IOException;
 
 import okhttp3.Interceptor;
