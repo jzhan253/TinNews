@@ -27,29 +27,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
-        // assert navHostFragment != null;
-
         navController = navHostFragment.getNavController();
         NavigationUI.setupWithNavController(navView, navController);
         NavigationUI.setupActionBarWithNavController(this, navController);
-
-//        NewsApi api = RetrofitClient.newInstance().create(NewsApi.class);
-//
-//        api.getTopHeadlines("US").enqueue(new Callback<NewsResponse>() {
-//            @Override
-//            public void onResponse(Call<NewsResponse> call, Response<NewsResponse> response) {
-//                if (response.isSuccessful()) {
-//                    Log.d("getTopHeadlines", response.body().toString());
-//                } else {
-//                    Log.d("getTopHeadlines", response.toString());
-//                }
-//            }
-//            @Override
-//            public void onFailure(Call<NewsResponse> call, Throwable t) {
-//                Log.d("getTopHeadlines", t.toString());
-//            }
-//        });
-
     }
 
     @Override
